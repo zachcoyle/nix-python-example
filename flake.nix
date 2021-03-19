@@ -45,6 +45,10 @@
           buildInputs = [
             (pkgs.poetry2nix.mkPoetryEnv { projectDir = ./.; })
           ];
+
+          shellHook = ''
+            poetry run true
+          '';
         };
 
       }
